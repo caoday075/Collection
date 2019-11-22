@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Teko:700");
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 20% 10%;
+  text-align: center;
+}
+section.dkBlue {
+  background-color: #315f6b;
+}
+
+.btn {
+  font-family: 'Teko', sans-serif;
+  position: relative;
+  display: inline-block;
+  color: #315f6b;
+  font-size: 21px;
+  text-transform: uppercase;
+  padding: 16px 30px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background-color: transparent;
+  transition: 300ms ease-in;
+  line-height: 1;
+}
+.btn:before, .btn:after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  transition: all 200ms ease-in, width 700ms cubic-bezier(0.45, -0.33, 0.43, 1.46);
+}
+.btn:after {
+  top: 6px;
+  bottom: -6px;
+  right: -6px;
+  border-right: 2px solid #0084a9;
+  border-bottom: 2px solid #0084a9;
+}
+.btn:before {
+  top: -6px;
+  bottom: 6px;
+  left: -6px;
+  border-left: 2px solid #0084a9;
+  border-top: 2px solid #0084a9;
+}
+.btn:hover {
+  background-color: #0084a9;
+  color: #fff;
+}
+.btn:hover:before, .btn:hover:after {
+  width: 30%;
+  border-color: #8dc53e;
+}
+.btn.green {
+  color: #a8ef44;
+}
+.btn.green:before, .btn.green:after {
+  border-color: #fff;
+}
+.btn.green:hover {
+  background-color: #8dc53e;
+  color: #fff;
+}

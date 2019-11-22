@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>login form animation with css and javscript</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  <main>
+    <form id="login">
+        <h2>Login</h2>
+        <div class="dr-form-group">
+            <input type="text" class="dr-input" required>
+            <span class="dr-input-underline"></span>
+            <label class="dr-label">User Name</label>
+        </div>
+        <div class="dr-form-group">
+            <input type="password" class="dr-input" required>
+            <span class="dr-input-underline"></span>
+            <label class="dr-label">Password</label>
+        </div>
+        <div class="dr-form-group dr-go">
+        <button type="button" class="dr-btn-go" onclick="getGoImage()">Go</button>
+        </div>
+        <a href="#" class="dr-register-btn" onclick="goToRegister()"><i class="fa fa-plus fa-lg"></i></a>
+    </form>
+    <form id="register">
+        <h2>Register</h2>
+        <div class="dr-form-group">
+            <input type="text" class="dr-input" required>
+            <span class="dr-input-underline"></span>
+            <label class="dr-label">User Name</label>
+        </div>
+        <div class="dr-form-group">
+            <input type="password" class="dr-input" required>
+            <span class="dr-input-underline"></span>
+            <label class="dr-label">Password</label>
+        </div>
+        <div class="dr-form-group">
+            <input type="password" class="dr-input" required>
+            <span class="dr-input-underline"></span>
+            <label class="dr-label">Password</label>
+        </div>
+        <div class="dr-form-group dr-go">
+        <button type="button" class="dr-btn-go" onclick="getGoImage()">Go</button>
+        </div>
+        <a href="#" class="dr-register-btn" onclick="goToLogin()"><i class="fa fa-close fa-lg"></i></a>
+    </form>
+</main>
+  
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+$primaryColor: #27ae60;
+
+body {
+  background: #f4f4f4;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif	
+}
+
+input, button {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif	
+}
+
+.ProductForm {
+  background: white;
+  width: 700px;
+  margin: 0 auto;
+  
+  
+  
+  &--img {
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    background: url("https://placeholdit.imgix.net/~text?txtsize=24&txt=img&w=350&h=150");
+    background-size: cover;
+    background-position: center;
+    height: 154px;
+    max-height: 154px;
+    min-height: 154px;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  
+  &--info {
+    width: 100%;
+    padding-left:15px;
+    box-sizing: border-box;
+  }
+  
+  &--quantity-price-container {
+
+  }
+  
+  &--submit {
+    display: flex;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    
+    &--icon {
+      padding: 10px 10px;
+      background: #27ae60;
+    }
+    &--label {
+      padding: 10px 15px;
+      background: #2ecc71;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+  }
+  
+  &--quantity-price {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    &:first-child {
+      padding-left: 0;
+      padding-right: 10px;
+      border-right: #ddd dashed thin;
+    }
+    &:last-child {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+    
+    h1 {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }    
+  }
+  
+  &--section {
+    border-bottom: #ddd thin solid;
+    padding: 15px;
+    display: flex;
+    &:last-child {
+      border: none;
+    }
+  }
+  
+  &--input {
+    display: flex; 
+    border: #ddd thin solid;
+    margin-bottom: 10px;
+    &:last-child {
+      margin: 0;
+    }
+    
+    label {
+      border: none;
+      padding: 5px 10px;
+      border-right: #ddd thin solid;
+      width: 30px;
+      text-align: center;
+    }
+    
+    input {
+      border: none;
+      padding: 5px 10px;
+      width: 100%;
+    }
+  }
+}

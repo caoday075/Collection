@@ -1,0 +1,163 @@
+-
+	var data = [
+		{
+			icon: "fa-tachometer",
+			title: "عدد الإحصائيات",
+			count: "5000",
+			color: "#24c6da"
+		},
+		{
+			icon: "fa-line-chart",
+			title: "عدد الإحصائيات",
+			count: "100000",
+			color: "#66b965"
+		},
+		{
+			icon: "fa-columns",
+			title: "عدد الإحصائيات",
+			count: "500",
+			color: "#ec3c7a"
+		},
+		{
+			icon: "fa-sort-numeric-asc",
+			title: "عدد الإحصائيات",
+			count: "500",
+			color: "#ffa724"
+		},
+	]
+	
+h1.page-title
+	i.icon(class="fa fa-balance-scale" aria-hidden="true")
+	|نظرة عامة على النظام
+.dashbeard-container
+	each val in data
+		div.dashbeard-card.card-0
+			.card-content
+				.card-icon(style=`background-color:${val.color};`)
+					i.fa(class=val.icon)
+				h3.card-title=val.title
+					span.card-count.start-counter=val.count
+.dashbeard-container
+	each val in data
+		div.dashbeard-card
+			.card-content
+				.card-icon(style=`background-color:${val.color};`)
+					i.fa(class=val.icon)
+				h3.card-title=val.title
+					span.card-count.start-counter=val.count
+					
+					
+.dashbeard-container
+	each val in data
+		div.dashbeard-card.card-2
+			.card-content
+				.card-icon(style=`background-color:${val.color};`)
+					i.fa(class=val.icon)
+				h3.card-title=val.title
+					span.card-count.start-counter=val.count
+
+
+.dashbeard-container
+	each val in data
+		div.dashbeard-card.card-3
+			.card-content(style=`background-color:${val.color};`)
+				.card-icon
+					i.fa(class=val.icon)
+				h3.card-title=val.title
+					span.card-count.start-counter=val.count
+
+.chart-container
+	.dashboard-widget
+		.widget-header
+			h3.widget-title
+				|تجربة مؤشر الأداء
+		.widget-body
+			canvas#line-chart
+	.dashboard-widget
+		.widget-header
+			h3.widget-title
+				|تجربة مؤشر الأداء
+		.widget-body
+			canvas#pie-chart
+			
+						
+.changelog-container
+	.dashboard-widget
+		.widget-header
+			h3.widget-title
+				|سجل تحديثات النظام
+			span.changelog-count 500
+		.widget-body
+			each val in new Array(3)
+				.changelog-card.fix
+					p.card-label إصلاح
+					p.card-text
+						|إصلاح خطأ في النظلم إصلاح خطأ في النظلم إصلاح خطأ في النظلم 
+
+				.changelog-card.feature
+					p.card-label ميزه
+					p.card-text
+						|إضافه ميزة في النظلم إضافه ميزة في النظلم إضافه ميزة في النظلم 
+
+				.changelog-card.enhance
+					p.card-label تحديث
+					p.card-text
+						|تحديث تجربه المستخدم في النظلم تحديث تجربه المستخدم في النظلم تحديث تجربه المستخدم في النظلم 
+			.text-left
+				button(type="button").see-all-changelog جميع التحديثات
+			
+.stickynotes-container
+	.dashboard-widget
+		.widget-header
+			h3.widget-title
+				|ملاحظات تذكير
+		.widget-body
+			.stickynote-card.style-yellow
+				.card-header
+					ul.colors
+						li(data-color="yellow").color.yellow.active
+						li(data-color="green").color.green
+						li(data-color="blue").color.blue
+						
+				.card-content
+					p.paragraph
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+			.stickynote-card.style-green
+				.card-header
+					ul.colors
+						li(data-color="yellow").color.yellow
+						li(data-color="green").color.green.active
+						li(data-color="blue").color.blue
+						
+				.card-content
+					p.paragraph
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+			.stickynote-card.style-blue
+				.card-header
+					ul.colors
+						li(data-color="yellow").color.yellow
+						li(data-color="green").color.green
+						li(data-color="blue").color.blue.active
+						
+				.card-content
+					p.paragraph
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+						|يوجد هنا بعض الكلمات
+			.stickynote-card.add-stickynote-card
+				p.paragraph
+					|أضف ملاحظة
+						

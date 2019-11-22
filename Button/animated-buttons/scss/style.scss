@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Teko:700');
+
+$white: #fff;
+$green: #8dc53e;
+$ltGreen: #a8ef44;
+$blue: #0084a9;
+$greyBlue: #315f6b;
+
+@mixin primaryFont {
+	font-family: 'Teko', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+section {
+	padding: 20% 10%;
+	text-align: center;
+	
+	&.dkBlue {
+		background-color: $greyBlue;
+	}
+}
+
+.btn {
+	@include primaryFont;
+	position: relative;
+	display: inline-block;
+	color: $greyBlue;
+	font-size: 21px;
+	text-transform: uppercase;
+	padding: 16px 30px;
+	text-decoration: none;
+	letter-spacing: 1px;
+	background-color: transparent;
+	transition: 300ms ease-in;
+	line-height: 1;
+	
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		width: 70%;
+		transition:  all 200ms ease-in, width 700ms cubic-bezier(.45,-0.33,.43,1.46);
+	}
+	
+	&:after {
+		top: 6px;
+		bottom: -6px;
+		right: -6px;
+		border-right: 2px solid $blue;
+		border-bottom: 2px solid $blue;
+	}
+	
+	&:before {
+		top: -6px;
+		bottom: 6px;
+		left: -6px;
+		border-left: 2px solid $blue;
+		border-top: 2px solid $blue;
+	}
+	
+	&:hover {
+		background-color: $blue;
+		color: $white;
+
+		&:before, &:after {
+			width: 30%;
+			border-color: $green;
+		}
+	}
+	
+	&.green {
+		color: $ltGreen;
+		
+		&:before, &:after {
+			border-color: $white;
+		}
+		
+		&:hover {
+			background-color: $green;
+			color: $white;
+		}
+	}
+	
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Text Effect - Breathe - [Chrome only]</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  
+<svg class="texteffect" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid meet" style="height:80%;width:80%;">
+  <defs>
+    <radialGradient id="shadowGrad" color-interpolation="sRGB">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.4"></stop>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.25"></stop>
+      <stop offset="95%" stop-color="#000" stop-opacity="0"></stop>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="0" y2="1" color-interpolation="sRGB">
+      <stop offset="0%" stop-color="#cef5db" stop-opacity="1"></stop>
+      <stop offset="100%" stop-color="#15a960" stop-opacity="1"></stop>
+    </linearGradient>
+    <radialGradient id="topRadial" color-interpolation="sRGB">
+      <stop offset="0%" stop-color="#88ff00" stop-opacity="1"></stop>
+      <stop offset="95%" stop-color="#888000" stop-opacity="1"></stop>
+    </radialGradient>
+    <radialGradient id="botRadial" color-interpolation="sRGB">
+      <stop offset="0%" stop-color="#880000" stop-opacity="1"></stop>
+      <stop offset="95%" stop-color="#888000" stop-opacity="1"></stop>
+    </radialGradient>
+    <g id="dispMap">
+      <rect x="0" y="0" width="1600" height="600" fill="#888000"></rect>
+      <ellipse id="topDisp" cx="800" cy="0" rx="800" ry="300" fill="url(#topRadial)"></ellipse>
+      <ellipse id="botDisp" cx="800" cy="600" rx="800" ry="300" fill="url(#botRadial)"></ellipse>
+    </g>
+    <filter id="lungs" x="0" y="0" width="1600" height="600" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feImage result="map" xlink:href="#dispMap"></feImage>
+      <feDisplacementMap result="bulge" in="SourceGraphic" in2="map" scale="300" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      <feGaussianBlur in="bulge" stdDeviation="25"></feGaussianBlur>
+      <feColorMatrix result="border" type="matrix" values="0 0 0 0 .105  0 0 0 0 .512  0 0 0 0 .297  0 0 0 60 -3"></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="border"></feMergeNode>
+        <feMergeNode in="bulge"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="780" cy="520" rx="750" ry="80" fill="url(#shadowGrad)"></ellipse>
+  <text x="800" y="400" text-anchor="middle" fill="url(#textGrad)" font-family="Baloo Bhaina" font-size="300" filter="url(#lungs)">BREATHE</text>
+</svg>
+  
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
